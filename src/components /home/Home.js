@@ -1,10 +1,10 @@
-import { GoToShopButton } from "./GoToShopButton";
+import { GoToBookingButton } from "./GoToBookingButton";
 
 export const Home = () => {
   return (
     <div>
       <div id="background-image">
-        <GoToShopButton />
+        <GoToBookingButton />
       </div>
       <div className="text-container">
         Kolejka Radość to atrakcja działająca w ramach Kolei Linowych. To

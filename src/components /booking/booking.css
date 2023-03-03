@@ -1,0 +1,40 @@
+.cart-area-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  background-color: #b2ccdc;
+}
+
+#cart-icon {
+  opacity: 80%;
+  margin: 5px;
+}
+
+#number-of-cart-items {
+  font-size: 20px;
+  color: rgba(78, 77, 77, 0.925);
+  margin: 5px;
+}
+
+#book-button {
+  background-color: #ffbb00;
+  border: 2px solid #ffbb00;
+  transition: 0.4s;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  margin: 5px 0 5px 5px;
+  box-shadow: 0px 5px 15px 1px #bcbcbce0;
+}
+
+#book-button:hover {
+  cursor: pointer;
+  background-color: #72808a;
+  box-shadow: 0px 0px 3px 1px rgba(78, 77, 77, 0.925);
+  border: 2px solid #72808a;
+}
+
+.tickets-container {
+  padding: 200px;
+}

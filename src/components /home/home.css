@@ -23,7 +23,7 @@
   height: 100%;
 }
 
-#go-to-shop-button {
+#go-to-booking-button {
   padding: 20px 40px;
   font-size: 30px;
   color: white;
@@ -32,7 +32,7 @@
   transition: 0.4s;
   box-shadow: 0px 5px 15px 1px #c0c0c0;
 }
-#go-to-shop-button:hover {
+#go-to-booking-button:hover {
   cursor: pointer;
   background-color: #72808a;
   box-shadow: 0px 0px 16px 3px rgba(78, 77, 77, 0.925);
