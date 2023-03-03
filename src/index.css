@@ -1,0 +1,38 @@
+* {
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+/* Topbar */
+.app-topbar-container {
+  background-color: #a1b7c6;
+  padding: 40px 40px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#app-title {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#app-logo {
+  width: 100px;
+  padding: 10px;
+  margin-right: 5px;
+}
+
+/* Footer */
+.footer-container {
+  padding: 50px 20px;
+  background-color: #91a3af;
+  color: white;
+  font-size: 18px;
+}
