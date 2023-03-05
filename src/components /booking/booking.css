@@ -80,3 +80,9 @@
   border: 2px solid #ffbb00;
   border-radius: 3px;
 }
+
+.ticket-price {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
