@@ -1,25 +1,13 @@
-export const TicketsGrid = () => {
+export const TicketsGrid = ({ name, price }) => {
   return (
-    <div className="tickets-container">
-      <div className="ticket-widget">
-        <div className="ticket-type">
-          Grupowy dla 6 osób w jedną stronę
-          <div className="ticket-price"> zł</div>
-        </div>
-        <div className="add-button-container">
-          <button className="descrease-button add-button">-</button>0
-          <button className="increase-button add-button">+</button>
-        </div>
+    <div className="ticket-widget">
+      <div className="ticket-type">
+        {name}
+        <div className="ticket-price">{price} zł</div>
       </div>
-      <div className="ticket-widget">
-        <div className="ticket-type">
-          Grupowy dla 6 osób w jedną stronę
-          <div className="ticket-price"> zł</div>
-        </div>
-        <div className="add-button-container">
-          <button className="descrease-button add-button">-</button>0
-          <button className="increase-button add-button">+</button>
-        </div>
+      <div className="add-button-container">
+        <button className="descrease-button add-button">-</button>0
+        <button className="increase-button add-button">+</button>
       </div>
     </div>
   );

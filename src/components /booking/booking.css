@@ -37,24 +37,20 @@
   border: 2px solid #72808a;
 }
 
-.tickets-container {
-  padding: 200px;
-}
-
 /* Tickets */
 
 .tickets-container {
   display: grid;
-  gap: 1em;
   justify-content: center;
+  margin: 10px;
 }
 
 .ticket-widget {
-  display: flex;
-  align-items: center;
-  border: 2px double #72808a;
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  border: 2px groove #72808a;
   font-size: 20px;
-  justify-content: center;
 }
 
 .ticket-type {
@@ -62,15 +58,22 @@
   color: white;
   border-right: 1px solid white;
   padding: 30px;
+  text-align: center;
+}
+
+.ticket-price {
+  text-align: center;
+  color: white;
+  font-weight: bold;
 }
 
 .add-button-container {
   color: rgb(78, 77, 77);
-  text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .add-button {
-  cursor: pointer;
   font-size: 20px;
   width: 40px;
   padding: 5px 10px;
@@ -79,10 +82,12 @@
   background-color: #ffbb00;
   border: 2px solid #ffbb00;
   border-radius: 3px;
+  box-shadow: inset 0 0 0 0 #72808a;
+  transition: 0.4s;
 }
 
-.ticket-price {
-  text-align: center;
-  color: white;
-  font-weight: bold;
+.add-button:hover {
+  cursor: pointer;
+  box-shadow: inset 2em 0 0 0 #72808a;
+  border: 2px solid #72808a;
 }
