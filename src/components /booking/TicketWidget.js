@@ -1,4 +1,6 @@
-export const TicketsGrid = ({ name, price }) => {
+export const TicketWidget = ({ name, price, setOrder, itemsQuantity }) => {
+  const addTicket = () => {};
+
   return (
     <div className="ticket-widget">
       <div className="ticket-type">
