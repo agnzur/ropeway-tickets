@@ -5,20 +5,7 @@ import { useEffect, useState } from "react";
 
 export const Booking = () => {
   const [tickets, setTickets] = useState([]);
-  const [order, setOrder] = useState([
-    {
-      id: 1,
-      quantity: 2,
-      name: "Normalny w dwie strony",
-      price: 60,
-    },
-    {
-      id: 2,
-      quantity: 3,
-      name: "Normalny w jedną stronę",
-      price: 30,
-    },
-  ]);
+  const [order, setOrder] = useState([]);
 
   const itemsQuantity = order.map((x) => x.quantity).reduce((a, c) => a + c, 0);
 
