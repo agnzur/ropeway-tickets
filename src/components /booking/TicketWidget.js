@@ -1,5 +1,7 @@
-export const TicketWidget = ({ name, price, setOrder, itemsQuantity }) => {
-  const addTicket = () => {};
+export const TicketWidget = ({ id, name, price, setOrder, order }) => {
+  const getQuantity = () => {
+    return order.find((x) => x.id === id)?.quantity ?? 0;
+  };
 
   return (
     <div className="ticket-widget">
@@ -8,7 +10,8 @@ export const TicketWidget = ({ name, price, setOrder, itemsQuantity }) => {
         <div className="ticket-price">{price} zł</div>
       </div>
       <div className="add-button-container">
-        <button className="descrease-button add-button">-</button>0
+        <button className="descrease-button add-button">-</button>
+        {getQuantity()}
         <button className="increase-button add-button">+</button>
       </div>
     </div>
