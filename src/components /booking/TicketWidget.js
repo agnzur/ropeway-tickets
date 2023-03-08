@@ -24,6 +24,18 @@ export const TicketWidget = ({ id, name, price, setOrder, order }) => {
     setOrder(newOrder);
   };
 
+  const removeTicket = () => {
+    if (quantity === 0) return;
+    const newOrder = order.map((x) => {
+      if (x.id === id) {
+        return { id: id, name: name, price: price, quantity: quantity - 1 };
+      }
+      return x;
+    });
+    const filteredNewOrder = newOrder.filter((x) => x.quantity > 0);
+    setOrder(filteredNewOrder);
+  };
+
   return (
     <div className="ticket-widget">
       <div className="ticket-type">
@@ -31,7 +43,9 @@ export const TicketWidget = ({ id, name, price, setOrder, order }) => {
         <div className="ticket-price">{price} zł</div>
       </div>
       <div className="add-button-container">
-        <button className="descrease-button add-button">-</button>
+        <button className="descrease-button add-button" onClick={removeTicket}>
+          -
+        </button>
         {quantity}
         <button className="increase-button add-button" onClick={addTicket}>
           +
