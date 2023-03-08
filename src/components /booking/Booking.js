@@ -15,7 +15,7 @@ export const Booking = () => {
 
   return (
     <div>
-      <CartArea orderQuantity={itemsQuantity} />
+      <CartArea itemsQuantity={itemsQuantity} />
       <div className="tickets-container">
         {tickets.map((x) => {
           return (
