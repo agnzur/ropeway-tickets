@@ -5,6 +5,7 @@ import { Topbar } from "./components /Topbar";
 import { Footer } from "./components /Footer";
 import { Booking } from "./components /booking/Booking";
 import { Summary } from "./components /summary/Summary";
+import { Confirmation } from "./components /confirmation/Confirmation";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/summary" element={<Summary />} />
+          <Route path="/confirmation" element={<Confirmation />} />
         </Routes>
       </BrowserRouter>
       <Footer />
