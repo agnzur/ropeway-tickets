@@ -1,0 +1,38 @@
+.order-info-container {
+  padding: 50px;
+  font-size: 30px;
+  color: #64717a;
+  border-bottom: 2px solid #72808a;
+}
+
+.order-info {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px 20px 0px;
+  font-size: 20px;
+  color: #64717a;
+}
+
+.client-input {
+  font-size: 18px;
+  color: #64717a;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+#confirm-button {
+  margin: 60px;
+  font-size: 20px;
+  padding: 10px;
+}
