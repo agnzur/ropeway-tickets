@@ -1,4 +1,13 @@
 export const Inputs = ({ email, setEmail, date, setDate }) => {
+  const isoDate = date.toISOString();
+  const newDate = isoDate.substring(0, isoDate.indexOf("T"));
+
+  const handleDateChange = (e) => {
+    const stringDate = e.target.value;
+    const date = new Date(stringDate);
+    setDate(date);
+  };
+
   return (
     <div>
       <div className="input-container">
@@ -19,10 +28,8 @@ export const Inputs = ({ email, setEmail, date, setDate }) => {
           id="date-input"
           className="client-input"
           type="date"
-          value={date}
-          onChange={(e) => {
-            setDate(e.target.value);
-          }}
+          value={newDate}
+          onChange={handleDateChange}
         ></input>
       </div>
     </div>

@@ -6,6 +6,8 @@ export const ConfirmButton = ({ email, date }) => {
     if (!email.includes("@")) return true;
     const małpa = email.indexOf("@");
     if (email.indexOf(".", małpa) === -1) return true;
+    console.log(date);
+    if (date < new Date()) return true;
   };
 
   return (
