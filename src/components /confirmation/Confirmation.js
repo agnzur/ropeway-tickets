@@ -1,3 +1,7 @@
 export const Confirmation = () => {
-  return <h1>cześć!</h1>;
+  return (
+    <div className="confirmation-container">
+      <div id="booking-info">Numer Twojej rezerwacji to: {}</div>
+    </div>
+  );
 };

@@ -1,0 +1,15 @@
+.confirmation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#booking-info {
+  background-color: #ffbb00;
+  text-align: center;
+  padding: 100px;
+  color: white;
+  font-size: 35px;
+
+  margin: 100px;
+}
