@@ -7,7 +7,7 @@ export const Booking = () => {
   const [tickets, setTickets] = useState([]);
   const [order, setOrder] = useState([]);
 
-  const itemsQuantity = order.map((x) => x.quantity).reduce((a, c) => a + c, 0);
+  const itemsQuantity = order.length;
 
   useEffect(() => {
     getAvailableTickets().then((x) => setTickets(x));
