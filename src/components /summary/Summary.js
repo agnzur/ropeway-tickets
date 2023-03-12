@@ -10,7 +10,7 @@ export const Summary = ({ order }) => {
   };
 
   const orderDetails = order.map((x, i) => (
-    <div key={i}>
+    <div key={i} className="order-details">
       {x.name} {x.price} {"zł"}
     </div>
   ));
@@ -21,14 +21,15 @@ export const Summary = ({ order }) => {
 
   return (
     <div>
-      <div className="order-info-container">
-        <div>
-          <div> Podsumowanie:</div>
-          <div>{orderDetails}</div>
+      <div id="summary-heading">Podsumowanie:</div>
+      <div className="summary-container">
+        <div className="details-container">
+          <div className="info-heading">Twoje bilety:</div>
+          {orderDetails}
         </div>
-        <div>
-          Do zapłaty:
-          <div> {totalSum} zł</div>
+        <div className="details-container">
+          <div className="info-heading">Do zapłaty:</div>
+          <div className="order-details"> {totalSum} zł</div>
         </div>
       </div>
       <Inputs date={date} setDate={setDate} email={email} setEmail={setEmail} />

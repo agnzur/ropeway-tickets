@@ -1,8 +1,36 @@
-.order-info-container {
+#summary-heading {
+  font-size: 50px;
+  padding: 40px 0 0;
+  text-align: center;
+  color: #ffbb00;
+  letter-spacing: 2px;
+}
+
+.summary-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: space-between;
   padding: 50px;
-  font-size: 30px;
   color: #64717a;
   border-bottom: 2px solid #72808a;
+}
+
+.info-heading {
+  text-decoration: underline;
+  font-size: 20px;
+  padding: 10px 0;
+  margin: 20px 0;
+}
+
+.order-details {
+  font-size: 25px;
+  padding: 10px 0;
+}
+
+.details-container {
+  padding: 0 20px 20px;
 }
 
 .grid-container {
