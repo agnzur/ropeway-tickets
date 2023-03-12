@@ -3,9 +3,8 @@ import { TicketWidget } from "./TicketWidget";
 import { getAvailableTickets } from "./Api";
 import { useEffect, useState } from "react";
 
-export const Booking = () => {
+export const Booking = ({ order, setOrder }) => {
   const [tickets, setTickets] = useState([]);
-  const [order, setOrder] = useState([]);
 
   const itemsQuantity = order.length;
 

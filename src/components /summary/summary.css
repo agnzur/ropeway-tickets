@@ -5,12 +5,6 @@
   border-bottom: 2px solid #72808a;
 }
 
-.order-info {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 20px;
-}
-
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
