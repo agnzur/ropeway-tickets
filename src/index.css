@@ -7,7 +7,7 @@ body {
 }
 
 /* Topbar */
-.app-topbar-container {
+.topbar-container {
   background-color: #a1b7c6;
   padding: 40px 40px 30px;
   display: flex;
@@ -30,7 +30,7 @@ body {
 }
 
 /* Footer */
-.footer-container {
+.contact-container {
   padding: 50px 20px;
   background-color: #91a3af;
   color: white;

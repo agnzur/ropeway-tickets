@@ -7,6 +7,8 @@ export const Booking = () => {
   const [tickets, setTickets] = useState([]);
   const [order, setOrder] = useState([]);
 
+  const itemsQuantity = order.length;
+
   const getOrderFromSessionStorage = () => {
     return JSON.parse(sessionStorage.getItem("order"));
   };
@@ -16,8 +18,6 @@ export const Booking = () => {
     if (orderFromSS === null) return;
     setOrder(orderFromSS);
   }, []);
-
-  const itemsQuantity = order.length;
 
   useEffect(() => {
     getAvailableTickets().then((x) => setTickets(x));

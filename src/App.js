@@ -1,11 +1,10 @@
-import { React } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home } from "./components /home/Home";
-import { Topbar } from "./components /Topbar";
-import { Footer } from "./components /Footer";
-import { Booking } from "./components /booking/Booking";
-import { Summary } from "./components /summary/Summary";
-import { Confirmation } from "./components /confirmation/Confirmation";
+import { Home } from "./components/home/Home";
+import { Topbar } from "./components/Topbar";
+import { Footer } from "./components/Footer";
+import { Booking } from "./components/booking/Booking";
+import { Summary } from "./components/summary/Summary";
+import { Confirmation } from "./components/confirmation/Confirmation";
 
 function App() {
   return (

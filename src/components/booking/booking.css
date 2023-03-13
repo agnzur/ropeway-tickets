@@ -11,7 +11,7 @@
   margin: 5px;
 }
 
-#number-of-cart-items {
+#cart-items-num {
   font-size: 20px;
   color: rgba(78, 77, 77, 0.925);
   margin: 5px;
@@ -69,8 +69,6 @@
 }
 
 .ticket-price {
-  text-align: center;
-  color: white;
   font-weight: bold;
 }
 
