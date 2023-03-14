@@ -33,6 +33,12 @@
   padding: 0 20px 20px;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Inputs  component*/
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -55,10 +61,8 @@
   padding: 0 10px;
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-}
+/* Confirm button component */
+
 #confirm-button {
   margin: 20px 0 60px;
   font-size: 20px;

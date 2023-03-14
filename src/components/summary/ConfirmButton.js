@@ -7,8 +7,8 @@ export const ConfirmButton = ({ email, date }) => {
   const isButtonDisabled = () => {
     if (email.lenght < 3) return true;
     if (!email.includes("@")) return true;
-    const małpa = email.indexOf("@");
-    if (email.indexOf(".", małpa) === -1) return true;
+    const indexOfAt = email.indexOf("@");
+    if (email.indexOf(".", indexOfAt) === -1) return true;
     if (date < new Date()) return true;
   };
 

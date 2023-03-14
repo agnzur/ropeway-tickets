@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export const GoToSummaryButton = ({ itemsQuantity, order }) => {
+export const GoToSummaryButton = ({ itemsQuantity }) => {
   const isButtonDisabled = () => {
     if (itemsQuantity === 0) return true;
   };

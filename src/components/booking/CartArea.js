@@ -1,6 +1,6 @@
 import { GoToSummaryButton } from "./GoToSummaryButton";
 
-export const CartArea = ({ itemsQuantity, order }) => {
+export const CartArea = ({ itemsQuantity }) => {
   return (
     <div className="cart-area-container">
       <img
@@ -8,7 +8,7 @@ export const CartArea = ({ itemsQuantity, order }) => {
         id="cart-icon"
       />
       <div id="cart-items-num">{itemsQuantity}</div>
-      <GoToSummaryButton itemsQuantity={itemsQuantity} order={order} />
+      <GoToSummaryButton itemsQuantity={itemsQuantity} />
     </div>
   );
 };

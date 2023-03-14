@@ -3,6 +3,8 @@ import { Inputs } from "./Inputs";
 import { useEffect, useState } from "react";
 
 export const Summary = () => {
+  const [orderFromSS, setOrderFromSS] = useState([]);
+
   const getTomorrowDate = () => {
     const tomorrow = new Date();
     tomorrow.setDate(new Date().getDate() + 1);
@@ -12,7 +14,6 @@ export const Summary = () => {
   const getOrderFromSessionStorage = () => {
     return JSON.parse(sessionStorage.getItem("order"));
   };
-  const [orderFromSS, setOrderFromSS] = useState([]);
 
   useEffect(() => setOrderFromSS(getOrderFromSessionStorage()), []);
 

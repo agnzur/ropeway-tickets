@@ -27,12 +27,12 @@ export const TicketWidget = ({ id, name, price, setOrder, order }) => {
         {name}
         <div className="ticket-price">{price} zł</div>
       </div>
-      <div className="add-button-container">
-        <button className="add-button" onClick={removeTicket}>
+      <div className="ticket-button-container">
+        <button className="ticket-button" onClick={removeTicket}>
           -
         </button>
         {quantity}
-        <button className="add-button" onClick={addTicket}>
+        <button className="ticket-button" onClick={addTicket}>
           +
         </button>
       </div>

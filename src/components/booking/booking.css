@@ -1,3 +1,11 @@
+.tickets-container {
+  display: grid;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* CartArea component */
+
 .cart-area-container {
   display: flex;
   justify-content: flex-end;
@@ -16,6 +24,8 @@
   color: rgba(78, 77, 77, 0.925);
   margin: 5px;
 }
+
+/* GoToSummaryButton componnet */
 
 #book-button {
   color: white;
@@ -44,13 +54,7 @@
   border: 2px solid #9b9a9a;
 }
 
-/* Tickets */
-
-.tickets-container {
-  display: grid;
-  justify-content: center;
-  margin: 20px;
-}
+/* TicketWidget container */
 
 .ticket-widget {
   margin: 20px;
@@ -72,13 +76,13 @@
   font-weight: bold;
 }
 
-.add-button-container {
+.ticket-button-container {
   color: rgb(78, 77, 77);
   display: flex;
   align-items: center;
 }
 
-.add-button {
+.ticket-button {
   font-size: 20px;
   width: 40px;
   padding: 5px 10px;
@@ -92,7 +96,7 @@
   cursor: pointer;
 }
 
-.add-button:hover {
+.ticket-button:hover {
   box-shadow: inset 2em 0 0 0 #fb9e23;
   border: 2px solid #fb9e23;
 }
