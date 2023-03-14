@@ -1,28 +1,34 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { placeOrder } from "../../api";
 
 export const ConfirmButton = ({ email, date }) => {
+  const navigate = useNavigate();
+
   const isButtonDisabled = () => {
     if (email.lenght < 3) return true;
     if (!email.includes("@")) return true;
     const małpa = email.indexOf("@");
     if (email.indexOf(".", małpa) === -1) return true;
-    console.log(date);
     if (date < new Date()) return true;
   };
 
+  async function getOrderNumber() {
+    const orderNumber = await placeOrder();
+    navigate(`/confirmation?order=${orderNumber}`);
+  }
+
   return (
-    <Link to="/confirmation">
-      <button
-        id="confirm-button"
-        disabled={isButtonDisabled()}
-        className={
-          isButtonDisabled()
-            ? "confirm-button-disabled"
-            : "confirm-button-enabled"
-        }
-      >
-        Potwierdź
-      </button>
-    </Link>
+    <button
+      id="confirm-button"
+      disabled={isButtonDisabled()}
+      className={
+        isButtonDisabled()
+          ? "confirm-button-disabled"
+          : "confirm-button-enabled"
+      }
+      onClick={getOrderNumber}
+    >
+      Potwierdź
+    </button>
   );
 };
