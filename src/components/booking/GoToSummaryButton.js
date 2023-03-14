@@ -5,10 +5,6 @@ export const GoToSummaryButton = ({ itemsQuantity, order }) => {
     if (itemsQuantity === 0) return true;
   };
 
-  const setOrderToSessionStorage = () => {
-    sessionStorage.setItem("order", JSON.stringify(order));
-  };
-
   return (
     <Link to="/summary">
       <button
@@ -17,7 +13,6 @@ export const GoToSummaryButton = ({ itemsQuantity, order }) => {
           isButtonDisabled() ? "book-button-disabled" : "book-button-enabled"
         }
         disabled={isButtonDisabled()}
-        onClick={setOrderToSessionStorage}
       >
         Rezerwuj
       </button>
