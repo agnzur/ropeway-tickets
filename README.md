@@ -1,3 +1,5 @@
+# About the project
+
 In this project I created a shop-page for a ropeway. The projest was made in HTML, CSS, JS and React.
 The design of app is responsive (usage of flexbox and grid). In componnets I used: useState, useEffect, useNavigate hooks. I also used session storage for keeping order data in a cart and in a order summary. 
 
