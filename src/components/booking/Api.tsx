@@ -1,4 +1,10 @@
-export async function getAvailableTickets() {
+interface Ticket {
+  id: number;
+  name: string;
+  price: number;
+}
+
+export async function getAvailableTickets(): Promise<Ticket[]> {
   const availableTickets = [
     {
       id: 1,

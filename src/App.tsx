@@ -6,7 +6,7 @@ import { Booking } from "./components/booking/Booking";
 import { Summary } from "./components/summary/Summary";
 import { Confirmation } from "./components/confirmation/Confirmation";
 
-function App() {
+function App(): React.ReactElement {
   return (
     <div>
       <Topbar />
