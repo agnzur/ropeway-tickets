@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 
-export const GoToSummaryButton = ({ itemsQuantity }) => {
+interface GoToSummaryButtonProps {
+  itemsQuantity: number;
+}
+
+export const GoToSummaryButton = ({
+  itemsQuantity,
+}: GoToSummaryButtonProps) => {
   const isButtonDisabled = () => {
-    if (itemsQuantity === 0) return true;
+    return itemsQuantity === 0;
   };
 
   return (

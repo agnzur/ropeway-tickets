@@ -1,6 +1,10 @@
 import { GoToSummaryButton } from "./GoToSummaryButton";
 
-export const CartArea = ({ itemsQuantity }) => {
+interface CartAreaProps {
+  itemsQuantity: number;
+}
+
+export const CartArea = ({ itemsQuantity }: CartAreaProps) => {
   return (
     <div className="cart-area-container">
       <img

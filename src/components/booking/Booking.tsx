@@ -2,15 +2,18 @@ import { CartArea } from "./CartArea";
 import { TicketWidget } from "./TicketWidget";
 import { getAvailableTickets } from "./Api";
 import { useEffect, useState } from "react";
+import { Ticket } from "./Api";
 
 export const Booking = () => {
-  const [tickets, setTickets] = useState([]);
-  const [order, setOrder] = useState([]);
+  const [availableTickets, setAvailableTickets] = useState<Ticket[]>([]);
+  const [order, setOrder] = useState<Ticket[]>([]);
 
-  const itemsQuantity = order.length;
+  const itemsQuantity: number = order.length;
 
-  const getOrderFromSessionStorage = () => {
-    return JSON.parse(sessionStorage.getItem("order"));
+  const getOrderFromSessionStorage = (): Ticket[] => {
+    const orderString = sessionStorage.getItem("order");
+    if (orderString === null) return [];
+    return JSON.parse(orderString);
   };
 
   useEffect(() => {
@@ -20,14 +23,14 @@ export const Booking = () => {
   }, []);
 
   useEffect(() => {
-    getAvailableTickets().then((x) => setTickets(x));
+    getAvailableTickets().then((x) => setAvailableTickets(x));
   }, []);
 
   return (
     <div>
       <CartArea itemsQuantity={itemsQuantity} />
       <div className="tickets-container">
-        {tickets.map((x) => {
+        {availableTickets.map((x) => {
           return (
             <TicketWidget
               key={x.id}

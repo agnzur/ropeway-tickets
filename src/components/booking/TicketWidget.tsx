@@ -1,18 +1,34 @@
-export const TicketWidget = ({ id, name, price, setOrder, order }) => {
-  const quantity = order.filter((x) => x.id === id).length;
+import { Ticket } from "./Api";
 
-  const setOrderToSessionStorage = (newOrder) => {
-    return sessionStorage.setItem("order", JSON.stringify(newOrder));
+interface TicketWidgetProp {
+  id: number;
+  name: string;
+  price: number;
+  setOrder: (order: Ticket[]) => void;
+  order: Ticket[];
+}
+
+export const TicketWidget = ({
+  id,
+  name,
+  price,
+  setOrder,
+  order,
+}: TicketWidgetProp) => {
+  const quantity: number = order.filter((x) => x.id === id).length;
+
+  const setOrderToSessionStorage = (newOrder: Ticket[]): void => {
+    sessionStorage.setItem("order", JSON.stringify(newOrder));
   };
 
-  const addTicket = () => {
+  const addTicket = (): void => {
     const newOrder = [...order];
     newOrder.push({ id, name, price });
     setOrder(newOrder);
     setOrderToSessionStorage(newOrder);
   };
 
-  const removeTicket = () => {
+  const removeTicket = (): void => {
     if (quantity === 0) return;
     const newOrder = [...order];
     const indexToRemove = newOrder.findIndex((x) => x.id === id);
