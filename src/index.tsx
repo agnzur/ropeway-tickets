@@ -6,5 +6,9 @@ import "./components/booking/booking.css";
 import "./components/summary/summary.css";
 import "./components/confirmation/confirmation.css";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const rootElement = document.getElementById("root");
+
+if (rootElement === null) throw new Error("Couldn't find route");
+
+const root = ReactDOM.createRoot(rootElement);
 root.render(<App />);

@@ -1,9 +1,10 @@
 import { ConfirmButton } from "./ConfirmButton";
 import { Inputs } from "./Inputs";
 import { useEffect, useState } from "react";
+import { Ticket } from "../booking/Api";
 
 export const Summary = () => {
-  const [orderFromSS, setOrderFromSS] = useState([]);
+  const [orderFromSS, setOrderFromSS] = useState<Ticket[]>([]);
 
   const getTomorrowDate = () => {
     const tomorrow = new Date();
@@ -11,15 +12,17 @@ export const Summary = () => {
     return tomorrow;
   };
 
-  const getOrderFromSessionStorage = () => {
-    return JSON.parse(sessionStorage.getItem("order"));
+  const getOrderFromSessionStorage = (): Ticket[] => {
+    const orderString = sessionStorage.getItem("order");
+    if (orderString === null) return [];
+    return JSON.parse(orderString);
   };
 
   useEffect(() => setOrderFromSS(getOrderFromSessionStorage()), []);
 
-  const totalSum = orderFromSS.reduce((a, c) => a + c.price, 0);
-  const [email, setEmail] = useState("");
-  const [date, setDate] = useState(getTomorrowDate());
+  const totalSum: number = orderFromSS.reduce((a, c) => a + c.price, 0);
+  const [email, setEmail] = useState<string>("");
+  const [date, setDate] = useState<Date>(getTomorrowDate());
 
   return (
     <div>
@@ -40,7 +43,7 @@ export const Summary = () => {
       </div>
       <Inputs date={date} setDate={setDate} email={email} setEmail={setEmail} />
       <div className="button-container">
-        <ConfirmButton date={date} email={email} />
+        <ConfirmButton date={date} email={email} order={orderFromSS} />
       </div>
     </div>
   );

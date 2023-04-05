@@ -1,4 +1,4 @@
-export const Footer = () => {
+export const Footer = (): React.ReactElement => {
   return (
     <div className="contact-container">
       <div className="contact-info">Telefon: 000-000-000</div>

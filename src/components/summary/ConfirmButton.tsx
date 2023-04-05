@@ -1,19 +1,27 @@
 import { useNavigate } from "react-router-dom";
 import { placeOrder } from "../../api";
+import { Ticket } from "../booking/Api";
 
-export const ConfirmButton = ({ email, date }) => {
+interface ConfirmButtonProps {
+  email: string;
+  date: Date;
+  order: Ticket[];
+}
+
+export const ConfirmButton = ({ email, date, order }: ConfirmButtonProps) => {
   const navigate = useNavigate();
 
-  const isButtonDisabled = () => {
-    if (email.lenght < 3) return true;
+  const isButtonDisabled = (): boolean => {
+    if (email.length < 3) return true;
     if (!email.includes("@")) return true;
     const indexOfAt = email.indexOf("@");
     if (email.indexOf(".", indexOfAt) === -1) return true;
     if (date < new Date()) return true;
+    return false;
   };
 
-  async function getOrderNumber() {
-    const orderNumber = await placeOrder();
+  async function getOrderNumber(): Promise<void> {
+    const orderNumber = await placeOrder(order);
     navigate(`/confirmation?order=${orderNumber}`);
   }
 

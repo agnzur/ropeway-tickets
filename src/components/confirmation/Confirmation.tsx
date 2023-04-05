@@ -1,9 +1,12 @@
-export const Confirmation = () => {
-  const getOrderNumber = () => {
+export const Confirmation = (): React.ReactElement => {
+  const getOrderNumber = (): string => {
     const orderNumber = new URLSearchParams(window.location.search).get(
       "order"
     );
-    return orderNumber;
+
+    if (orderNumber !== null) return orderNumber;
+
+    throw new Error("Błąd! Brak numeru zamówienia.");
   };
 
   return (

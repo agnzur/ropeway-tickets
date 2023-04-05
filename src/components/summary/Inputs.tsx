@@ -1,8 +1,15 @@
-export const Inputs = ({ email, setEmail, date, setDate }) => {
+interface InputsProps {
+  email: string;
+  setEmail: (email: string) => void;
+  date: Date;
+  setDate: (date: Date) => void;
+}
+
+export const Inputs = ({ email, setEmail, date, setDate }: InputsProps) => {
   const isoDate = date.toISOString();
   const newDate = isoDate.substring(0, isoDate.indexOf("T"));
 
-  const handleDateChange = (e) => {
+  const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const stringDate = e.target.value;
     const date = new Date(stringDate);
     setDate(date);
