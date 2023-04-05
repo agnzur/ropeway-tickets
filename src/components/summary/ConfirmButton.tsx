@@ -20,7 +20,7 @@ export const ConfirmButton = ({ email, date, order }: ConfirmButtonProps) => {
     return false;
   };
 
-  async function getOrderNumber(): Promise<void> {
+  async function placeOrderAndNavigate(): Promise<void> {
     const orderNumber = await placeOrder(order);
     navigate(`/confirmation?order=${orderNumber}`);
   }
@@ -34,7 +34,7 @@ export const ConfirmButton = ({ email, date, order }: ConfirmButtonProps) => {
           ? "confirm-button-disabled"
           : "confirm-button-enabled"
       }
-      onClick={getOrderNumber}
+      onClick={placeOrderAndNavigate}
     >
       Potwierdź
     </button>
